@@ -26,9 +26,13 @@ So we fixed the **representation first**, not the heuristics.
 ## High-Level Pipeline
 
 PDF
+
 └─► Layout Reconstruction (x/y coordinates)
+
 └─► Ordered Lines + Column Break
+
 └─► Section Detection (simple rules)
+
 └─► Clean, structured data
 
 
