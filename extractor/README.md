@@ -7,6 +7,10 @@ Instead of fighting brittle heuristics, this system rebuilds the **reading order
 
 ---
 
+## Demo Video:
+
+https://youtu.be/vu9_eH5pEO4
+
 ## Why This Exists
 
 Earlier attempts failed because:
