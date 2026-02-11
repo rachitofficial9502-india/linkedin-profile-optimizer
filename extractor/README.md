@@ -7,6 +7,10 @@ Instead of fighting brittle heuristics, this system rebuilds the **reading order
 
 ---
 
+## Demo Video:
+
+https://youtu.be/vu9_eH5pEO4
+
 ## Why This Exists
 
 Earlier attempts failed because:
@@ -26,9 +30,13 @@ So we fixed the **representation first**, not the heuristics.
 ## High-Level Pipeline
 
 PDF
+
 └─► Layout Reconstruction (x/y coordinates)
+
 └─► Ordered Lines + Column Break
+
 └─► Section Detection (simple rules)
+
 └─► Clean, structured data
 
 
