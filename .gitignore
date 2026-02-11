@@ -1,3 +1,4 @@
 profile.pdf
 __pycache__
 .venv
+config.py

@@ -7,8 +7,7 @@ from model.ollama_client import call_local_llm
 
 from model.openrouter_client import call_openrouter_llm
 
-OPENROUTER_MODEL = "arcee-ai/trinity-large-preview:free"
-OPENROUTER_API_KEY = "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"
+from analyzer.config import OPENROUTER_MODEL, OPENROUTER_API_KEY
 
 
 MODEL_BACKEND = "openrouter"
