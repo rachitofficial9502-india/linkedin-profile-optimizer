@@ -14,7 +14,7 @@ def main():
     # -----------------------------
     # Input (example)
     # -----------------------------
-    pdf_path = "profile_vinayak-desai.pdf"
+    pdf_path = "profile.pdf"
 
     # -----------------------------
     # Extraction
