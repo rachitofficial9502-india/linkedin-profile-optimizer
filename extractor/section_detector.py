@@ -50,6 +50,7 @@ def detect_sections(lines: List[str]) -> Dict[str, object]:
             "certifications",
             "education",
             "experience",
+            "languages"
         }:
             break
 

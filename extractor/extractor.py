@@ -1,9 +1,37 @@
-from pdf_layout_readre import extract_ordered_lines
-from section_detector import detect_sections
+# extractor.py
+
+from extractor.pdf_layout_readre import extract_ordered_lines
+from extractor.section_detector import detect_sections
+
+def extract_profile(pdf_path: str) -> dict:
+    """
+    Extractor function for backend usage.
+
+    Returns structured data for Analyzer.
+    Does NOT print.
+    """
+
+    # 1. Extract ordered lines
+    lines = extract_ordered_lines(pdf_path)
+
+    # 2. Detect sections
+    sections = detect_sections(lines)
+
+    # 3. Return ONLY what downstream needs
+    return {
+        "headline": " ".join(sections["headline"]) if sections["headline"] else None,
+        "summary": " ".join(sections["about"]) if sections["about"] else None,
+        "skills": ", ".join(sections["top_skills"]) or []
+    }
 
 
 def main():
-    pdf_path = "../profile.pdf"
+    """
+    OLD script behavior.
+    This runs ONLY when extractor.py is executed directly.
+    """
+
+    pdf_path = "../profile_vinayak-desai.pdf"
 
     # 1. Extract ordered lines using layout logic
     lines = extract_ordered_lines(pdf_path)
@@ -19,7 +47,7 @@ def main():
     for line in lines:
         print(line)
 
-    # 2. Detect sections (v3)
+    # 2. Detect sections
     sections = detect_sections(lines)
 
     # 3. Pretty print detected sections
